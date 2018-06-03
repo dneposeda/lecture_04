@@ -1,0 +1,33 @@
+.header {
+    color: black;
+}
+
+.h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: green;
+    display: flex;
+    transform: translateX(50%);
+}
+
+::placeholder {
+    color: grey;
+}
+
+
+.social {
+    display: block;
+    margin-top: 10px;
+}
+
+$socials: vk, fb, tw, gl;
+
+@each $value in $socials {
+    .social--#{$value} {
+        @extend .icon-#{$value};
+        
+        &:hover {
+            @extend .icon-#{$value}-hover;
+        }
+    } 
+}

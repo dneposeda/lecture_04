@@ -1,0 +1,167 @@
+.about {
+    color: $aboutFont;
+    background-color: $bgFooter;
+    padding: 0 10px;
+
+    &__wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        padding-top: 17px;
+        padding-bottom: 26px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 43px;
+        margin-top: 30px;
+    }
+
+    &__block {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+
+        &-skills {
+            @extend .about__block;
+        }
+    }
+
+    &__photo {
+        margin-bottom: 20px;
+
+        &-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 20px;
+    }
+}
+
+
+.email {
+    margin-bottom: 17px;
+    
+    &__title {
+        margin-right: 5px;
+    }
+    
+    &__link {
+        font-size: 17px;
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid $activeElem;
+        padding: 3px 5px;
+    }
+}
+
+.phone {
+    margin-bottom: 17px;
+
+    &__title {
+        @extend .email__title;
+    }
+    
+    &__link {
+		@extend .email__link;
+    }
+
+}
+
+
+
+
+
+.price {
+    padding-bottom: 10px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+        margin-bottom: 20px;
+        margin-top: 46px;
+    }
+
+    &__list {
+        text-align: center;
+        font-size: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        max-width: 292px;
+        margin-bottom: 20px;
+        list-style: none;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+
+
+.skills {
+
+    &__title {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+        margin-bottom: 20px;
+        margin-top: 46px;
+    }
+
+    &-block {
+        padding-top: 9px;
+        padding-bottom: 15px;
+    }
+
+    &-list {
+        padding-bottom: 15px;  
+    }
+
+    &__item {
+        margin-bottom: 18px;
+        list-style: none;
+    }
+
+    &__name {
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    &__progress {
+        background-color: #fff;
+    }
+
+    &__progress-ok {
+        text-align: center;
+        color: #000;
+        background-color: #9e9e9e;
+        padding: 5px 0;
+        
+        &--95 {
+            width: 95%
+        }
+
+        &--85 {
+            width: 85%
+        }
+
+        &--80 {
+            width: 80%
+        }
+    }
+
+
+
+
+}
+

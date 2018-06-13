@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -16,26 +16,27 @@ module.exports = {
   },
   
   devtool: 'source-map',
- // devServer: {
- //   contentBase: './dist'
- // },
- 
+
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
-		  {
-			loader: "css-loader",
-			options: { minimize: true }
+          {
+            loader: 'css-loader',
+        			options: { 
+                minimize: true,
+                sourceMap: true
+              }
           },
-		  {
-			loader: 'postcss-loader',
-		  },
-		  {
-			loader: "sass-loader",
-          }
+          {
+            loader: 'postcss-loader',
+              options: {
+                sourceMap: true
+              }
+          },
+
         ]
       },
     ]
@@ -45,22 +46,20 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
 	
     new HtmlWebpackPlugin({
-/* 	  minify: {
-        collapseWhitespace: true
-      }, */
-	  template: 'src/html/index.html'
+	    template: 'src/html/index.html'
     }),
 	
-	new MiniCssExtractPlugin({
-      filename: "style.css",
+    new MiniCssExtractPlugin({
+      filename: 'css/style.css',
     }),
-	
-	new CopyWebpackPlugin([
-		{
-			from: './src/img/',
-			to: 'img/[name].[ext]',
-		}
-	]),
+    
+    new CopyWebpackPlugin([
+      {
+        from: './src/img/',
+        to: 'img/[name].[ext]',
+      },
+
+    ]),
   ],
 
   

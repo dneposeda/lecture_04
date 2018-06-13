@@ -1,0 +1,19 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__img-wrap {
+        flex-shrink: 1;
+        flex-basis: 33.33%;
+        flex-grow: 1;
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        min-width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+}

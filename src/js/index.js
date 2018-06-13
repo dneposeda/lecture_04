@@ -1,9 +1,8 @@
 /* import _ from 'lodash'; */
 /* import printMe from './print.js'; */
 
-import '../sass/layout/base.scss'
-import '../sass/style.scss';
-import '../sass/section/footer.scss';
+import '../css/style.css';
+
 
 /* function component() {
   var element = document.createElement('div');

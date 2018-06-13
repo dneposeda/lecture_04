@@ -1,0 +1,47 @@
+.pagination {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__btn {
+        display: inline-block;
+        padding: 0px 10px;
+        font-weight: 400;
+        font-size: 19px;
+        color: $fontColor;
+        text-decoration: none;
+
+        &--disable {
+            opacity: 0;
+        }
+    }
+
+    &__list {
+        display: inline-block;
+        font-size: 0;
+    }
+
+    &__item {
+        display: inline-block;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 5px 13px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $fontColor;
+        text-decoration: none;
+        transition: color 0.1s, background 0.1s;
+
+        &--active {
+            color: #ffffff;
+            background: #000;
+        }
+
+        &:hover {
+            color: #ffffff;
+            background: #000;
+        }
+    }
+}

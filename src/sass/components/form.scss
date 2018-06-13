@@ -1,0 +1,46 @@
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 17px;
+    padding-bottom: 26px;
+
+    &__input-block {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__input-title {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 400;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 10px 10px;
+        border: 1px solid #cecece;
+        outline: none;
+        transition: 0.3s border linear;
+
+        &:focus {
+            border: 1px solid $activeElem;
+        }
+
+        &-textarea {
+            @extend .form__input;
+            height: 70px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            resize: vertical;
+
+            &:focus {
+                @extend .form__input:focus;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,47 @@
+.cart {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &__item {
+        font-size: 14px;
+        color: #000;
+        border-bottom: 1px solid #aeaeae;
+        padding: 18px 0;
+        background-color: #bfbfbf;
+        list-style: none;
+
+        &--header {
+            color: #fff;
+            font-size: 25px;
+            padding: 33px 0;
+            background-color: #000;
+        }
+
+        &--footer {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            background-color: #b7b7b7;
+        }
+
+        &:first-child {
+            border-bottom: none;
+        }
+
+        &:last-child {
+            @extend .cart__item:first-child;
+        }
+
+    }
+
+    &__price {
+        font-size: 28px;
+        margin-bottom: 10px;
+
+        &--money {
+            font-size: 30px;
+            margin-right: 5px;
+        }
+    }
+}
+
